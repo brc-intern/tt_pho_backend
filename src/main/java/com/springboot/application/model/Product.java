@@ -24,12 +24,15 @@ public class Product {
 		super();
 	}
 
+
 	public Product(String name, String image, long price) {
 		super();
 		this.name = name;
 		this.image = image;
 		this.price = price;
 	}
+
+
 
 	public long getId() {
 		return id;
@@ -62,6 +65,7 @@ public class Product {
 	public void setPrice(long price) {
 		this.price = price;
 	}
+
 	
 	
 }
