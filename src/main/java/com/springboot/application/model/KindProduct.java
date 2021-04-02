@@ -23,7 +23,7 @@ public class KindProduct {
 	@Column(name = "kindname")
 	private String kindName;
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "idKind", referencedColumnName = "idkind")
+	@JoinColumn(name = "idKind", referencedColumnName = "id_kind")
 	private Set<Product> listProduct;
 	
 

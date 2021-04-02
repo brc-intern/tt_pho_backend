@@ -28,20 +28,20 @@ public class KindProductController {
 	KindProductService service;
 	@Autowired
 	ProductService service2;
-	@PostMapping("/create")
-	public KindProduct postKindProduct(@RequestBody KindProduct kindProduct) {
-		KindProduct kk = new KindProduct();
-		String check = kk.setKindName(kindProduct.getKindName());
-		System.out.println(check);
-		List<KindProduct> kind = service.findByKindName(check);
-		KindProduct kind2 = new KindProduct();
-		if(kind == null) {
-			kind2= service.ListKind(new KindProduct(kindProduct.getIdKind(), kindProduct.getKindName(), kindProduct.getListProduct()));
-		}else {
-			service2.save(kindProduct.getListProduct());
-		}
-		return kind2;
-	}
+//	@PostMapping("/create")
+//	public KindProduct postKindProduct(@RequestBody KindProduct kindProduct) {
+//		KindProduct kk = new KindProduct();
+//		String check = kk.setKindName(kindProduct.getKindName());
+//		System.out.println(check);
+//		List<KindProduct> kind = service.findByKindName(check);
+//		KindProduct kind2 = new KindProduct();
+//		if(kind == null) {
+//			kind2= service.ListKind(new KindProduct(kindProduct.getIdKind(), kindProduct.getKindName(), kindProduct.getListProduct()));
+//		}else {
+//			service2.save(kindProduct.getListProduct());
+//		}
+//		return kind2;
+//	}
 	
 	@GetMapping("/getkind/{idKind}")
 	public ResponseEntity<KindProduct> getKindProductById(@PathVariable("idKind") long idKind) {

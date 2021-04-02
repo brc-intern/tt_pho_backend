@@ -18,9 +18,9 @@ public class ProductService {
 	public Product ListProduct(Product product) {
 		return productRepository.save(product);
 	}
-	public Set<Product> save(Set<Product> set){
-		return productRepository.save(set);
-	}
+//	public Set<Product> save(Set<Product> set){
+//		return productRepository.save(set);
+//	}
 
 	public List<Product> findByName(String name) {
 		return productRepository.findByNameContaining(name);
